@@ -1,0 +1,80 @@
+Bent_Pipe_sim1-Solution_1                     Thu Oct 12  TMG2019.2.3 10/12/2023
+
+   Starting TMG Analysis...
+
+   ...done.
+
+Cpu time=      0.1     DATACH Module
+
+   Performing data checking...
+
+     Number of nodes                       41152
+     Number of geometric elements          32768
+     Number of 1-D/duct fluid elements         0
+
+   ...done.
+
+Cpu time=      0.8      ECHOS Module
+
+   Calculating geometrical parameters...
+
+   ...done.
+
+Cpu time=      1.2       COND Module
+
+   Calculating conductive conductances and capacitances...
+
+   ...done.
+
+Cpu time=      1.8      VUFAC Module
+
+   Calculating thermal couplings and geometric radiative parameters...
+
+   ...done.
+
+Cpu time=      2.7      GRAYB Module
+
+   Calculating radiative couplings and/or gray body matrices...
+
+   ...done.
+
+Cpu time=      2.7      POWER Module
+
+   Calculating radiative heat loads...
+     No radiative heat loads calculated.
+
+   ...done.
+
+Cpu time=      2.8      MEREL Module
+
+   Performing element merging and elimination...
+
+   ...done.
+
+Cpu time=      3.6   ANALYZER Module
+
+   Calculating temperatures...
+
+     Model Summary:
+
+     Number of elements                    =     32769
+     Total number of conductances          =     32768
+     Number of convective conductances     =     32768
+
+     Note: During the analysis process a number of elements have been
+     created whose labels you may not recognize. To find out more about
+     these elements and the elements they are associated with, please
+     look on file REPF for the phrase 'TMG element'
+
+
+   ...done.
+
+Cpu time=      3.6   RSLTPOST Module
+
+   Performing result postprocessing...
+
+
+
+
+   ...done.
+
