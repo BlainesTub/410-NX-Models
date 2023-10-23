@@ -1,0 +1,112 @@
+Bent_Pipe_sim1-Solution_1                     Thu Oct 12  TMG2019.2.3 10/12/2023
+
+
+Options for run:
+Module selection parameter=                     231
+File translation control parameter=             512
+Subdivision parameter=                            3
+Radiative Coupling Threshold=           0.00000E+00
+First conductance # for SINDA output=             0
+Residual view factor control value=               0
+Stefan-Boltzmann constant=              5.66900E-08
+Solution is steady state with 
+temperature convergence criterion       < 1.000E-02
+Absolute temperature offset=               -273.150
+Results output interval=                  0.000E+00
+Steady state iteration damping parameter= 1.000E+00
+Load time=                                0.000E+00
+Iteration limit=                              10000
+Conductive conductances and capacitances will be calculated with CG method
+                   Card 9 PARAMS Cards
+
+Parameter Card: PARAM UNITS 5  1.000000E+03  1.000000E+03  1.000000E+00 -2.7
+Parameter Card: PARAM ILU 10  1.000000E-07 100 MAX                          
+Parameter Card: PARAM COND NEW                                              
+Parameter Card: PARAM ENGBAL  1.000000E-02 FRACT                            
+Parameter Card: PARAM SCRMESG 1                                             
+Parameter Card: PARAM CNVGTRA 1.0                                           
+Parameter Card: PARAM CSOLVE 4 2                                            
+Parameter Card: PARAM PDMAX -1.000000E-02                                   
+Parameter Card: PARAM HYDLOOP 100                                           
+Parameter Card: PARAM HYDDAMP  1.000000E+00                                 
+Parameter Card: PARAM MAXNODEID 37686                                       
+Parameter Card: PARAM OPPENHEIM 1                                           
+Parameter Card: PARAM QOPPCAL                                               
+Parameter Card: PARAM SPECTRA 0 14387.69 0  3.000000E+00 0 0 0 0            
+Parameter Card: PARAM TIMETABLE TRUNCATE                                    
+
+               Group name association with a long group name
+
+Name    Long group name
+
+FLUAMB  Fluid Ambient
+INIT_BC INIT_BC
+Convect Convection to Environment(1)
+Parameter Card: PARAM TC_CONVECT OFF                                        
+Parameter Card: PARAM EXPRESSION RADIANS                                    
+Parameter Card: PARAM ELEMTYPE _FLUIDF 0 FLUIDFACE                          
+
+
+                    Multispectral Data Summary
+
+Number of spectral bands:                         0
+Constant in Planck's spectral energy distribution 1.43877E+04
+IR and solar spectrum separation is at            3.00000E+00 microns
+Band limits in microns:
+
+Band
+
+                    Calculation data for the GRAYB Module
+
+
+                    Calculation data for the POWER Module
+
+
+No element renumbering or merging was performed.
+ 
+
+                              Elements created by TMG
+
+
+                Association of boundary elements and CG elements
+
+
+
+                   Analyzer module calculation results
+
+
+       
+
+No. of iterations     8       TDmax = 0.000E+00 at element     67298
+
+Minimum temperature                 =    20.000 at element     52620 Flow__P
+Maximum temperature                 =    20.000 at element     66015 Flow__P
+Average temperature                 =    20.000
+
+                         Temperature summary for groups
+
+        Maximum    at   Minimum    at   Average     Total      Total     Total
+          Temp  element  Temp   element  Temp      Heat in  Capacitance   Mass
+
+ Group: Convection to Environment(1)
+          20.00   49630   20.00   47660   20.00   0.00E+00    0.00E+00  0.00E+00
+ Group: Fluid Ambient
+          20.00   50914   20.00   50914   20.00   0.00E+00    0.00E+00  0.00E+00
+ Group: Flow_PC
+          20.00   49630   20.00   47660   20.00   0.00E+00    0.00E+00  0.00E+00
+ Group: Flow__P
+          20.00   66015   20.00   52620   20.00   0.00E+00    0.00E+00  0.00E+00
+ Group: INIT_BC
+          20.00   49630   20.00   47660   20.00   0.00E+00    0.00E+00  0.00E+00
+
+ Summary for thermal elements
+
+ Maximum heat balance deviation occurs           at element     40929 Convect
+ Heat flow into sinks                = 9.689E+04
+ Heat flow from non-fluid sinks      = 9.691E+04
+ Heat load into elements             = 0.000E+00
+ Heat load into sinks                = 0.000E+00
+ Heat flow from fluid sinks          = 0.000E+00
+ Deviation from heat balance         = 1.478E+01
+
+

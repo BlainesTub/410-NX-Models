@@ -1,0 +1,792 @@
+<!--
+*================================================================
+*                      Mapping Information                       
+*           Maya Heat Transfer Technologies Ltd, 514-369-5706    
+*
+*        INPUT FILE: mapdata.xml
+*        CREATED ON: Wed Oct  4 09:32:31 2023
+*          SIM FILE: C:\Users\colmm\Desktop\NX Projects\410-NX-Models\Colin\Lab4\Impeller_sim1.sim
+*          FEM FILE: C:\Users\colmm\Desktop\NX Projects\410-NX-Models\Colin\Lab4\Impeller_fem1.fem
+*
+*=============================================================== 
+-->
+<SolutionFile version="NX 1884"
+  solver="Simcenter 3D Thermal/Flow"
+  class="Coupled Thermal-Flow"
+  solution="Advanced Thermal-Flow"
+  simulationName="Impeller_sim1"
+  solutionName="Solution 1">
+  <Units>
+    <System>Millimeters</System>
+    <LengthConversionFactor>  1.0000000E+03</LengthConversionFactor>
+    <ForceConversionFactor>  1.0000000E+03</ForceConversionFactor>
+    <TemperatureConversionFactor>  1.0000000E+00</TemperatureConversionFactor>
+    <AbsoluteTemperatureShift> -2.7315000E+02</AbsoluteTemperatureShift>
+  </Units>
+  <NXBaseModelUnits>
+    <System>Millimeters</System>
+    <LengthConversionFactor>  1.0000000E+03</LengthConversionFactor>
+    <ForceConversionFactor>  1.0000000E+03</ForceConversionFactor>
+    <TemperatureConversionFactor>  1.0000000E+00</TemperatureConversionFactor>
+    <AbsoluteTemperatureShift> -2.7315000E+02</AbsoluteTemperatureShift>
+  </NXBaseModelUnits>
+  <SolutionParameters>
+    <Details>
+      <Property name="Description">
+        <Value></Value>
+      </Property>
+      <Property name="Run Directory Options">
+        <Value>2</Value>
+      </Property>
+      <Property name="Run Directory Location">
+        <Value></Value>
+      </Property>
+      <Property name="Solve Thermal">
+        <Value>1</Value>
+      </Property>
+      <Property name="Solve Flow">
+        <Value>1</Value>
+      </Property>
+      <Property name="Solver Selection">
+        <Value>1</Value>
+      </Property>
+      <Property name="Parallel Flow Solver Scheme">
+        <Value>0</Value>
+      </Property>
+      <Property name="Turbulence Model">
+        <Value>2</Value>
+      </Property>
+      <Property name="LES Subgrid Scale Model">
+        <Value>0</Value>
+      </Property>
+      <Property name="Buoyancy">
+        <Value>0</Value>
+      </Property>
+      <Property name="Condensation Evaporation">
+        <Value>0</Value>
+      </Property>
+      <Property name="High Resolution of Flow Features">
+        <Value>0</Value>
+      </Property>
+      <Property name="Values Outside Time-dependent Tables">
+        <Value>0</Value>
+      </Property>
+      <Property name="Solution Type">
+        <Value>0</Value>
+      </Property>
+      <Property name="Transient Thermal Loads to Use for Steady State">
+        <Value>0</Value>
+      </Property>
+      <Property name="Use Loads at Time">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Thermostat">
+        <Value>0</Value>
+      </Property>
+      <Property name="Run Solution in Parallel">
+        <Value>0</Value>
+      </Property>
+      <Property name="Parallel Configuration File">
+        <Value></Value>
+      </Property>
+      <Property name="Enable Multithreading">
+        <Value>0</Value>
+      </Property>
+      <Property name="Number of Execution Threads">
+        <Value>2</Value>
+      </Property>
+      <Property name="Invalid Material Properties Check">
+        <Value>1</Value>
+      </Property>
+    </Details>
+    <AmbientConditions>
+      <Property name="Altitude Value">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Ambient Pressure">
+        <Value>0</Value>
+      </Property>
+      <Property name="Absolute Pressure">
+        <Value>  1.0135100E+02</Value>
+      </Property>
+      <Property name="Fluid Temperature">
+        <Value>  2.0000000E+01</Value>
+      </Property>
+      <Property name="Radiative Environment Temperature">
+        <Value>  2.0000000E+01</Value>
+      </Property>
+      <Property name="Ambient Humidity">
+        <Value>0</Value>
+      </Property>
+      <Property name="Ambient Relative Humidity Value">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Ambient Water Vapor to Dry Air Mass Ratio Value">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Ambient Tracer Fluid">
+        <Value>0</Value>
+      </Property>
+      <Property name="Ambient Tracer Fluid List" type="arraySSMO">
+      </Property>
+      <Property name="Ambient Tracer Fluid Mass Fractions" type="arrayFloat">
+      </Property>
+      <Property name="Ambient Mixture">
+        <Value>0</Value>
+      </Property>
+      <Property name="Ambient Mixture Mass Fractions" type="arrayFloat">
+      </Property>
+      <Property name="Ambient Tracked Fluid Area Fraction">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Gravitational Acceleration">
+        <Value>  9.8100000E+03</Value>
+      </Property>
+      <Property name="Gravity Direction">
+        <Value>  0.0000000E+00     0.0000000E+00    -1.0000000E+00</Value>
+      </Property>
+    </AmbientConditions>
+    <InitialConditions>
+      <Property name="Initial Conditions">
+        <Value>0</Value>
+      </Property>
+      <Property name="Initial Temperature Value">
+        <Value>  2.0000000E+01</Value>
+      </Property>
+      <Property name="X Velocity">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Y Velocity">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Z Velocity">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Initial Conditions Pressure">
+        <Value>  1.0135100E+02</Value>
+      </Property>
+      <Property name="Initial Conditions Fluid Temperature">
+        <Value>  2.0000000E+01</Value>
+      </Property>
+      <Property name="Turbulence Characteristics Modeling Object">
+        <Value>-1</Value>
+      </Property>
+      <Property name="Initial Humidity">
+        <Value>0</Value>
+      </Property>
+      <Property name="Initial Relative Humidity">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Initial Water Vapor to Dry Air Mass Ratio">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Initial Tracer Fluid">
+        <Value>0</Value>
+      </Property>
+      <Property name="Initial Tracer Fluid List" type="arraySSMO">
+      </Property>
+      <Property name="Initial Tracer Fluid Mass Fractions" type="arrayFloat">
+      </Property>
+      <Property name="Initial Mixture">
+        <Value>0</Value>
+      </Property>
+      <Property name="Initial Mixture Mass Fractions" type="arrayFloat">
+      </Property>
+      <Property name="Water Content Top">
+        <Value>0</Value>
+      </Property>
+      <Property name="Film Thickness Top">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Total Mass Top">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Surface Density Top">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Water Content Bottom">
+        <Value>0</Value>
+      </Property>
+      <Property name="Film Thickness Bottom">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Total Mass Bottom">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Surface Density Bottom">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Results Directory">
+        <Value></Value>
+      </Property>
+      <Property name="Thermal Temperature File">
+        <Value>0</Value>
+      </Property>
+      <Property name="TEMPF File">
+        <Value></Value>
+      </Property>
+      <Property name="Results to Use for Initial Conditions">
+        <Value>0</Value>
+      </Property>
+      <Property name="Initial Conditions Use Results at Time">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+    </InitialConditions>
+    <Restart>
+      <Property name="Perform Restart">
+        <Value>0</Value>
+      </Property>
+      <Property name="Restart Files Location">
+        <Value>0</Value>
+      </Property>
+      <Property name="Restart Directory">
+        <Value></Value>
+      </Property>
+      <Property name="Restart Options">
+        <Value>0</Value>
+      </Property>
+      <Property name="Conduction Capacitance Duct">
+        <Value>0</Value>
+      </Property>
+      <Property name="Thermal Couplings">
+        <Value>0</Value>
+      </Property>
+      <Property name="Convection Couplings">
+        <Value>0</Value>
+      </Property>
+      <Property name="Black Body View Factors">
+        <Value>0</Value>
+      </Property>
+      <Property name="Radiative Conductances">
+        <Value>0</Value>
+      </Property>
+      <Property name="Solar and Orbital View Factors">
+        <Value>0</Value>
+      </Property>
+      <Property name="Solar and Orbital Heat Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Solve Steady State Particle Tracking Simulation Only">
+        <Value>0</Value>
+      </Property>
+      <Property name="Create Backup Files">
+        <Value>0</Value>
+      </Property>
+      <Property name="Number of Iterations">
+        <Value>25</Value>
+      </Property>
+      <Property name="Update Backup Files with Stopped or Completed Solution">
+        <Value>0</Value>
+      </Property>
+    </Restart>
+    <Thermal>
+      <Property name="Include File">
+        <Value>0</Value>
+      </Property>
+      <Property name="Select File">
+        <Value></Value>
+      </Property>
+      <Property name="Compressible Flow">
+        <Value>0</Value>
+      </Property>
+      <Property name="Ablation-Charring Material" type="arraySSMO">
+      </Property>
+      <Property name="Thermo-Optical Property State">
+        <Value>1</Value>
+      </Property>
+    </Thermal>
+    <Flow3D>
+      <Property name="User Defined API File">
+        <Value>0</Value>
+      </Property>
+      <Property name="Select API File">
+        <Value></Value>
+      </Property>
+      <Property name="Non-fluid 2D and 3D Elements Block Flow">
+        <Value>1</Value>
+      </Property>
+      <Property name="Wall Treatment">
+        <Value>0</Value>
+      </Property>
+      <Property name="Default Wall Friction">
+        <Value>0</Value>
+      </Property>
+      <Property name="Height">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Default Convection Properties">
+        <Value>-1</Value>
+      </Property>
+      <Property name="Reference Temperature for Bulk Heat Transfer Coefficient">
+        <Value>0</Value>
+      </Property>
+      <Property name="Reference Temperature">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Default Particle Impact Type">
+        <Value>0</Value>
+      </Property>
+      <Property name="Default Coefficient of Restitution">
+        <Value>  5.0000000E-01</Value>
+      </Property>
+      <Property name="Length Scales">
+        <Value>0</Value>
+      </Property>
+      <Property name="Characteristic Length Scale">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Mean Flow Velocity Scale">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Connect Disjoint Fluid Meshes">
+        <Value>1</Value>
+      </Property>
+      <Property name="High Speed Flow">
+        <Value>0</Value>
+      </Property>
+      <Property name="Non-Newtonian Fluid" type="arraySSMO">
+      </Property>
+      <Property name="Source of Domain Geometry">
+        <Value>0</Value>
+      </Property>
+      <Property name="Remove Small Features">
+        <Value>0</Value>
+      </Property>
+      <Property name="Tolerance">
+        <Value>0</Value>
+      </Property>
+      <Property name="Relative Value">
+        <Value>  1.0000000E-05</Value>
+      </Property>
+      <Property name="Absolute Value">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Other Geometric Features">
+        <Value>0</Value>
+      </Property>
+      <Property name="Allow mesh size variations inside fluid domains">
+        <Value>0</Value>
+      </Property>
+      <Property name="Element Shape Threshold 2D">
+        <Value>0</Value>
+      </Property>
+      <Property name="Aspect Ratio Value 2D">
+        <Value>  1.6700000E-01</Value>
+      </Property>
+      <Property name="Skew 2D">
+        <Value>  7.0000000E-01</Value>
+      </Property>
+      <Property name="Maximum Angle 2D">
+        <Value>  1.4500000E+02</Value>
+      </Property>
+      <Property name="Element Shape Threshold 3D">
+        <Value>0</Value>
+      </Property>
+      <Property name="Aspect Ratio Value 3D">
+        <Value>  8.3000000E-02</Value>
+      </Property>
+      <Property name="Skew 3D">
+        <Value>  8.5000000E-01</Value>
+      </Property>
+      <Property name="Maximum Angle 3D">
+        <Value>  1.4500000E+02</Value>
+      </Property>
+      <Property name="Element Shape Threshold Refinement">
+        <Value>0</Value>
+      </Property>
+      <Property name="Element Shape Threshold Refinement Factor">
+        <Value>  1.0000000E+00</Value>
+      </Property>
+      <Property name="Element Growth Through Volume">
+        <Value>0</Value>
+      </Property>
+      <Property name="Element Growth Rate Through Volume">
+        <Value>  6.6600000E-01</Value>
+      </Property>
+      <Property name="Surface Curvature Based Variation">
+        <Value>0</Value>
+      </Property>
+      <Property name="Surface Curvature Based Size Variation">
+        <Value>  4.0000000E-01</Value>
+      </Property>
+    </Flow3D>
+    <TransientSetup>
+      <Property name="Start Time">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="End Coupled">
+        <Value>0</Value>
+      </Property>
+      <Property name="End Time">
+        <Value>  5.0000000E+02</Value>
+      </Property>
+      <Property name="Target Temperature" type="arraySSMO">
+      </Property>
+      <Property name="Target Temperature Change" type="arraySSMO">
+      </Property>
+      <Property name="Maximum End Time">
+        <Value>  5.0000000E+02</Value>
+      </Property>
+      <Property name="Thermal Time Step Method">
+        <Value>0</Value>
+      </Property>
+      <Property name="Thermal Number of Steps">
+        <Value>100</Value>
+      </Property>
+      <Property name="Thermal Time Step">
+        <Value>  1.0000000E+00</Value>
+      </Property>
+      <Property name="Thermal Time Step vs. Time Table">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Flow Time Integration Method">
+        <Value>0</Value>
+      </Property>
+      <Property name="Flow Time Step Method">
+        <Value>0</Value>
+      </Property>
+      <Property name="Flow Number of Steps">
+        <Value>100</Value>
+      </Property>
+      <Property name="Flow Time Step">
+        <Value>  1.0000000E+00</Value>
+      </Property>
+      <Property name="Flow Time Step vs. Time Table">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Thermal Results Type">
+        <Value>1</Value>
+      </Property>
+      <Property name="Thermal Time Interval">
+        <Value>  1.0000000E+00</Value>
+      </Property>
+      <Property name="Thermal Number of Results">
+        <Value>10</Value>
+      </Property>
+      <Property name="Thermal Output Times" type="arrayFloat">
+      </Property>
+      <Property name="Thermal Output Time Variation">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Flow Results Type">
+        <Value>0</Value>
+      </Property>
+      <Property name="Flow Time Interval">
+        <Value>  1.0000000E+00</Value>
+      </Property>
+      <Property name="Flow Number of Results">
+        <Value>10</Value>
+      </Property>
+      <Property name="Flow Output Times" type="arrayFloat">
+      </Property>
+      <Property name="Flow Output Time Variation">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Articulation Time Step Option">
+        <Value>0</Value>
+      </Property>
+      <Property name="Articulation Start Time">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Articulation End Time">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Articulation Calculation Interval">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+      <Property name="Articulation Number of Time Steps">
+        <Value>10</Value>
+      </Property>
+      <Property name="Articulation Times" type="arrayFloat">
+      </Property>
+      <Property name="Articulation Interval vs Time Table">
+        <Value>  0.0000000E+00</Value>
+      </Property>
+    </TransientSetup>
+    <ResultsOptions>
+      <Property name="Output Files for Refresh Results Refresh Reports">
+        <Value>0</Value>
+      </Property>
+      <Property name="Temperatures">
+        <Value>1</Value>
+      </Property>
+      <Property name="Temperature Results Location">
+        <Value>2</Value>
+      </Property>
+      <Property name="Min/Max Temperatures and Occurrence Times">
+        <Value>1</Value>
+      </Property>
+      <Property name="Total Temperatures">
+        <Value>0</Value>
+      </Property>
+      <Property name="Total Temperature Results Location">
+        <Value>2</Value>
+      </Property>
+      <Property name="Conductive Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Conductive Fluxes Results Location">
+        <Value>2</Value>
+      </Property>
+      <Property name="Convective Heat Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Convective Heat Flux Results Location">
+        <Value>2</Value>
+      </Property>
+      <Property name="Temperature Gradients">
+        <Value>0</Value>
+      </Property>
+      <Property name="Temperature Gradients Results Location">
+        <Value>2</Value>
+      </Property>
+      <Property name="Transverse Temperature Gradients">
+        <Value>0</Value>
+      </Property>
+      <Property name="Total Loads and Fluxes">
+        <Value>1</Value>
+      </Property>
+      <Property name="Residuals">
+        <Value>0</Value>
+      </Property>
+      <Property name="Free and Forced Convection Coefficients">
+        <Value>0</Value>
+      </Property>
+      <Property name="Free and Forced Convection Coefficient Results Location">
+        <Value>2</Value>
+      </Property>
+      <Property name="Corrected Free and Forced Convection Coefficients">
+        <Value>0</Value>
+      </Property>
+      <Property name="Corrected Free and Forced Convection Coefficient Results Location">
+        <Value>2</Value>
+      </Property>
+      <Property name="Wall Velocities">
+        <Value>0</Value>
+      </Property>
+      <Property name="Wall Velocity Results Location">
+        <Value>2</Value>
+      </Property>
+      <Property name="Joule Data">
+        <Value>0</Value>
+      </Property>
+      <Property name="Phase Change Quality">
+        <Value>0</Value>
+      </Property>
+      <Property name="RC Products">
+        <Value>0</Value>
+      </Property>
+      <Property name="Flow Temperatures">
+        <Value>1</Value>
+      </Property>
+      <Property name="Velocities">
+        <Value>1</Value>
+      </Property>
+      <Property name="Velocities Adjusted">
+        <Value>0</Value>
+      </Property>
+      <Property name="Vorticity">
+        <Value>0</Value>
+      </Property>
+      <Property name="Pressures">
+        <Value>1</Value>
+      </Property>
+      <Property name="Local and Bulk Convection Coefficients">
+        <Value>0</Value>
+      </Property>
+      <Property name="K-Epsilon Turbulence">
+        <Value>0</Value>
+      </Property>
+      <Property name="Non-Newtonian Model Quantities">
+        <Value>0</Value>
+      </Property>
+      <Property name="Fluid Densities">
+        <Value>0</Value>
+      </Property>
+      <Property name="Shear Stresses">
+        <Value>0</Value>
+      </Property>
+      <Property name="Roughness">
+        <Value>0</Value>
+      </Property>
+      <Property name="Y+">
+        <Value>0</Value>
+      </Property>
+      <Property name="Surface Pressure">
+        <Value>0</Value>
+      </Property>
+      <Property name="Mass Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Convective Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Humidity and Mixtures">
+        <Value>0</Value>
+      </Property>
+      <Property name="PMV">
+        <Value>0</Value>
+      </Property>
+      <Property name="PPD">
+        <Value>0</Value>
+      </Property>
+      <Property name="Mach Numbers">
+        <Value>0</Value>
+      </Property>
+      <Property name="Acoustic Power Density">
+        <Value>0</Value>
+      </Property>
+      <Property name="Pressure and Shear Resultants">
+        <Value>0</Value>
+      </Property>
+      <Property name="Results Condensation Evaporation">
+        <Value>0</Value>
+      </Property>
+      <Property name="Flow Residuals">
+        <Value>0</Value>
+      </Property>
+      <Property name="View factors Sums">
+        <Value>1</Value>
+      </Property>
+      <Property name="Environmental View Factors">
+        <Value>0</Value>
+      </Property>
+      <Property name="Apparent Temperatures">
+        <Value>0</Value>
+      </Property>
+      <Property name="Radiances">
+        <Value>0</Value>
+      </Property>
+      <Property name="Fluences">
+        <Value>0</Value>
+      </Property>
+      <Property name="Net Radiative Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Radiosity Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Irradiance Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Radiative Absorbed Fluxes">
+        <Value>1</Value>
+      </Property>
+      <Property name="Radiative Incident Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Radiative Transmitted Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Radiative Reflected Fluxes">
+        <Value>0</Value>
+      </Property>
+      <Property name="Temperatures Duct">
+        <Value>1</Value>
+      </Property>
+      <Property name="Temperature Results Location Duct">
+        <Value>2</Value>
+      </Property>
+      <Property name="Velocities Duct">
+        <Value>1</Value>
+      </Property>
+      <Property name="Velocity Results Location Duct">
+        <Value>2</Value>
+      </Property>
+      <Property name="Swirl Velocities Duct">
+        <Value>0</Value>
+      </Property>
+      <Property name="Swirl Velocity Results Location Duct">
+        <Value>2</Value>
+      </Property>
+      <Property name="Pressures Duct">
+        <Value>1</Value>
+      </Property>
+      <Property name="Pressure Results Location Duct">
+        <Value>2</Value>
+      </Property>
+      <Property name="Densities Duct">
+        <Value>0</Value>
+      </Property>
+      <Property name="Density Results Location Duct">
+        <Value>2</Value>
+      </Property>
+      <Property name="Mass Flows Duct">
+        <Value>0</Value>
+      </Property>
+      <Property name="Mass Flow Results Location Duct">
+        <Value>2</Value>
+      </Property>
+      <Property name="Reynold Numbers">
+        <Value>0</Value>
+      </Property>
+      <Property name="Reynolds Number Results Location Duct">
+        <Value>2</Value>
+      </Property>
+      <Property name="Tecplot">
+        <Value>0</Value>
+      </Property>
+      <Property name="CGNS">
+        <Value>0</Value>
+      </Property>
+      <Property name="Transient Results">
+        <Value>0</Value>
+      </Property>
+      <Property name="ParaView">
+        <Value>0</Value>
+      </Property>
+    </ResultsOptions>
+  </SolutionParameters>
+  <OpticalPropertyList>
+  </OpticalPropertyList>
+  <AdvancedOpticalPropertyList>
+  </AdvancedOpticalPropertyList>
+  <StateOpticalPropertyList>
+  </StateOpticalPropertyList>
+  <NonGeometricElementList>
+  </NonGeometricElementList>
+  <AblationList>
+  </AblationList>
+  <FanSpeedControllerList>
+  </FanSpeedControllerList>
+  <ActiveHeaterControllerList>
+  </ActiveHeaterControllerList>
+  <ArticulationJointList>
+  </ArticulationJointList>
+  <ConvectionPropertyList>
+  </ConvectionPropertyList>
+  <ConvectionCorrectionList>
+  </ConvectionCorrectionList>
+  <DuctHeadLossList>
+  </DuctHeadLossList>
+  <ExternalConditionsList>
+  </ExternalConditionsList>
+  <HeadLossList>
+  </HeadLossList>
+  <HomogeneousGasMixtureList>
+  </HomogeneousGasMixtureList>
+  <ImmiscibleFluidMixtureList>
+  </ImmiscibleFluidMixtureList>
+  <LayerList>
+  </LayerList>
+  <MonteCarloSettingsList>
+  </MonteCarloSettingsList>
+  <NonNewtonianFluidList>
+  </NonNewtonianFluidList>
+  <ReferenceTemperatureList>
+  </ReferenceTemperatureList>
+  <TargetTemperatureList>
+  </TargetTemperatureList>
+  <TargetTemperatureChangeList>
+  </TargetTemperatureChangeList>
+  <ThermostatList>
+  </ThermostatList>
+  <TracerFluidList>
+  </TracerFluidList>
+  <TurbulenceCharacteristicsList>
+  </TurbulenceCharacteristicsList>
+  <Constraints>
+    <MappingList>
+    </MappingList>
+  </Constraints>
+</SolutionFile>
