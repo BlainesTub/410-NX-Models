@@ -1,0 +1,50 @@
+# encoding: utf-8
+# 2022 R2
+SetScriptVersion(Version="22.2.192")
+template1 = GetTemplate(TemplateName="Geometry")
+system1 = template1.CreateSystem()
+template2 = GetTemplate(TemplateName="FLTG")
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+componentTemplate1 = GetComponentTemplate(Name="FluentTGridCellTemplate")
+system2 = template2.CreateSystem(
+    DataTransferFrom=[Set(FromComponent=geometryComponent1, TransferName=None, ToComponentTemplate=componentTemplate1)],
+    Position="Right",
+    RelativeTo=system1)
+meshComponent1 = system2.GetComponent(Name="Mesh")
+system3 = template2.CreateSystem(
+    ComponentsToShare=[meshComponent1],
+    Position="Right",
+    RelativeTo=system2)
+system4 = template2.CreateSystem(
+    ComponentsToShare=[meshComponent1],
+    Position="Below",
+    RelativeTo=system3)
+system2.DisplayText = "mesh"
+system5 = template2.CreateSystem(
+    ComponentsToShare=[meshComponent1],
+    Position="Below",
+    RelativeTo=system4)
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+geometry1.Edit(IsSpaceClaimGeometry=True)
+setup1 = system2.GetContainer(ComponentName="Setup")
+fluentLauncherSettings1 = setup1.GetFluentLauncherSettings()
+fluentLauncherSettings1.SetEntityProperties(Properties=Set(EnvPath={}, RunParallel=True))
+tGridData1 = GetDataEntity("/Mesh/TGridData:TGridData")
+tGridData1.SetEntityProperties(Properties=Set(RunParallel=True, NumberOfProcs=1))
+mesh1 = system2.GetContainer(ComponentName="Mesh")
+Fluent.Edit(Container=mesh1)
+setup1.SendCommand(Command='(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)')
+meshComponent1.Refresh()
+setup1.SendCommand(Command='/file/set-tui-version "22.2"(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)(cx-gui-do cx-activate-item "Key Behavioral Changes*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(%py-exec "preferences.General.KeyBehavioralChangesMessage.setState(True)")')
+setup1.SendCommand(Command="(%py-exec \"meshing.GlobalSettings.LengthUnit.setState(r'm')\")")
+setup1.SendCommand(Command="(%py-exec \"meshing.GlobalSettings.AreaUnit.setState(r'm^2')\")")
+setup1.SendCommand(Command="(%py-exec \"meshing.GlobalSettings.VolumeUnit.setState(r'm^3')\")")
+setup1.SendCommand(Command="(%py-exec \"workflow.TaskObject['Import Geometry'].Execute()\")")
+setup1.SendCommand(Command="(%py-exec \"workflow.TaskObject['Add Local Sizing'].AddChildToTask()\")")
+setup1.SendCommand(Command="(%py-exec \"workflow.TaskObject['Add Local Sizing'].Execute()\")")
+Save(Overwrite=True)
