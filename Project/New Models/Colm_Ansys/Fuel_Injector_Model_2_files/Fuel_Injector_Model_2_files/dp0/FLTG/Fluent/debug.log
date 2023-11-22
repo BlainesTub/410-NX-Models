@@ -89,3 +89,7 @@
 [1118/124710.369:WARNING:resource_bundle_qt.cpp(115)] locale_file_path.empty() for locale 
 [1118/124710.426:WARNING:resource_bundle_qt.cpp(115)] locale_file_path.empty() for locale 
 [1118/124714.784:WARNING:resource_bundle_qt.cpp(115)] locale_file_path.empty() for locale 
+[1120/165659.340:WARNING:resource_bundle_qt.cpp(115)] locale_file_path.empty() for locale 
+[1120/165659.542:WARNING:resource_bundle_qt.cpp(115)] locale_file_path.empty() for locale 
+[1120/165659.608:WARNING:resource_bundle_qt.cpp(115)] locale_file_path.empty() for locale 
+[1120/165659.649:WARNING:resource_bundle_qt.cpp(115)] locale_file_path.empty() for locale 
