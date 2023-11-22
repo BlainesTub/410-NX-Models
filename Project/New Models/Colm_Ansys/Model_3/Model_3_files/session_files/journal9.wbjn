@@ -7,3 +7,16 @@ mesh1.Edit()
 mesh1.Edit()
 mesh1.Exit()
 mesh1.Edit()
+mesh1.Edit()
+template1 = GetTemplate(TemplateName="Geometry")
+system2 = GetSystem(Name="Geom 1")
+system3 = template1.CreateSystem(
+    Position="Below",
+    RelativeTo=system2)
+system1.DisplayText = "Mesh, TA Tests"
+system3.DisplayText = "Geometry Better split"
+geometry1 = system3.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsDiscoveryGeometry=True)
+mesh1.Exit()
+geometry1.Exit()
+Save(Overwrite=True)

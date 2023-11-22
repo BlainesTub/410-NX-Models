@@ -1,0 +1,12 @@
+echo off
+set LOCALHOST=%COMPUTERNAME%
+set KILL_CMD="C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v231\fluent/ntbin/win64/winkill.exe"
+
+"C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v231\fluent\ntbin\win64\tell.exe" DESKTOP-78UUUDL 52943 CLEANUP_EXITING
+if /i "%LOCALHOST%"=="DESKTOP-78UUUDL" (%KILL_CMD% 27880) 
+if /i "%LOCALHOST%"=="DESKTOP-78UUUDL" (%KILL_CMD% 26600) 
+if /i "%LOCALHOST%"=="DESKTOP-78UUUDL" (%KILL_CMD% 29128) 
+if /i "%LOCALHOST%"=="DESKTOP-78UUUDL" (%KILL_CMD% 29264) 
+if /i "%LOCALHOST%"=="DESKTOP-78UUUDL" (%KILL_CMD% 14332) 
+if /i "%LOCALHOST%"=="DESKTOP-78UUUDL" (%KILL_CMD% 10548)
+del "C:\Users\colmm\Desktop\NX Projects\410-NX-Models\Project\New Models\Colm_Ansys\Model_4\cleanup-fluent-DESKTOP-78UUUDL-14332.bat"

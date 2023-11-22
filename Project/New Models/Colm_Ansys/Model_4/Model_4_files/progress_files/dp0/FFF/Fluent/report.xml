@@ -1,0 +1,284 @@
+<FluentXMLReport>
+<version>
+Fluent
+Version: 3d, dp, pbns, vof, ske, transient (3d, double precision, pressure-based, VOF, standard k-epsilon, transient)
+Release: 23.1.0
+Title: 
+</version>
+
+<Models>
+
+Models
+------
+
+   Model                        Settings                              
+   ----------------------------------------------------------------
+   Space                        3D                                    
+   Time                         Unsteady, 1st-Order Implicit          
+   Viscous                      Standard k-epsilon turbulence model   
+   Wall Treatment               Standard Wall Functions               
+   Heat Transfer                Enabled                               
+   Solidification and Melting   Disabled                              
+   Radiation                    None                                  
+   Species                      Disabled                              
+   Coupled Dispersed Phase      Disabled                              
+   NOx Pollutants               Disabled                              
+   SOx Pollutants               Disabled                              
+   Soot                         Disabled                              
+   Mercury Pollutants           Disabled                              
+   Structure                    Disabled                              
+   Acoustics                    Disabled                              
+   Eulerian Wall Film           Disabled                              
+   Potential/Electrochemistry   Disabled                              
+   Multiphase                   Volume of Fluid                       
+
+</Models>
+
+<MaterialProperties>
+Material Properties
+-------------------
+
+   Material: nitrous-oxide (fluid)
+
+      Property                  Units      Method       Value(s)                                                                                                                                                   
+      ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      Density                   kg/m^3     constant     1                                                                                                                                                          
+      Cp (Specific Heat)        J/(kg K)   polynomial   (300-1000: 480.40209 1.7931449 -0.0018499269 1.183286e-06 -3.5926868e-10) (1000-5000: 891.44932 0.54286542 -0.00022621572 4.2514557e-08 -2.9759269e-12)    
+      Thermal Conductivity      W/(m K)    constant     0.0454                                                                                                                                                     
+      Viscosity                 kg/(m s)   constant     1.72e-05                                                                                                                                                   
+      Molecular Weight          kg/kmol    constant     44.0128                                                                                                                                                    
+      Standard State Enthalpy   J/kgmol    constant     82054816                                                                                                                                                   
+      Reference Temperature     K          constant     298                                                                                                                                                        
+
+   Material: air (fluid)
+
+      Property                  Units      Method     Value(s)     
+      ----------------------------------------------------------
+      Density                   kg/m^3     constant   1.225        
+      Cp (Specific Heat)        J/(kg K)   constant   1006.43      
+      Thermal Conductivity      W/(m K)    constant   0.0242       
+      Viscosity                 kg/(m s)   constant   1.7894e-05   
+      Molecular Weight          kg/kmol    constant   28.966       
+      Standard State Enthalpy   J/kgmol    constant   0            
+      Reference Temperature     K          constant   298.15       
+
+   Material: aluminum (solid)
+
+      Property               Units      Method     Value(s)   
+      -----------------------------------------------------
+      Density                kg/m^3     constant   2719       
+      Cp (Specific Heat)     J/(kg K)   constant   871        
+      Thermal Conductivity   W/(m K)    constant   202.4      
+
+</MaterialProperties>
+
+<CellZoneConditions>
+Cell Zone Conditions
+--------------------
+
+   Zones
+
+      name               id   type    
+      -----------------------------
+      volume (mixture)   4    fluid   
+      volume (air)       4    fluid   
+      volume (n2o)       4    fluid   
+
+   Setup Conditions
+
+      volume (mixture)
+
+         Condition       Value   
+         ---------------------
+         Frame Motion?   no      
+         Mesh Motion?    no      
+
+      volume (air)
+
+         Condition   Value   
+         -----------------
+
+      volume (n2o)
+
+         Condition   Value   
+         -----------------
+
+</CellZoneConditions>
+
+<BoundaryConditions>
+Boundary Conditions
+-------------------
+
+   Zones
+
+      name                       id   type              
+      -----------------------------------------------
+      inlet (mixture)            5    pressure-inlet    
+      inlet (air)                5    pressure-inlet    
+      inlet (n2o)                5    pressure-inlet    
+      outlet (mixture)           6    pressure-outlet   
+      outlet (air)               6    pressure-outlet   
+      outlet (n2o)               6    pressure-outlet   
+      sym (mixture)              7    symmetry          
+      sym (air)                  7    symmetry          
+      sym (n2o)                  7    symmetry          
+      walls__faces__ (mixture)   8    wall              
+      walls__faces__ (air)       8    wall              
+      walls__faces__ (n2o)       8    wall              
+
+   Setup Conditions
+
+      inlet (mixture)
+
+         Condition                                                              Value        
+         ---------------------------------------------------------------------------------
+         Gauge Total Pressure [Pa]                                              3447378.6    
+         Total Temperature [K]                                                  77           
+         Note: Reinjected particles do not change their injection association   1834553792   
+
+      inlet (air)
+
+         Condition   Value   
+         -----------------
+
+      inlet (n2o)
+
+         Condition         Value   
+         -----------------------
+         Volume Fraction   1       
+
+      outlet (mixture)
+
+         Condition   Value   
+         -----------------
+
+      outlet (air)
+
+         Condition   Value   
+         -----------------
+
+      outlet (n2o)
+
+         Condition   Value   
+         -----------------
+
+      sym (mixture)
+
+         Condition   Value   
+         -----------------
+
+      sym (air)
+
+         Condition   Value   
+         -----------------
+
+      sym (n2o)
+
+         Condition   Value   
+         -----------------
+
+      walls__faces__ (mixture)
+
+         Condition                  Value             
+         ------------------------------------------
+         Thermal BC Type            Heat Flux         
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      walls__faces__ (air)
+
+         Condition   Value   
+         -----------------
+
+      walls__faces__ (n2o)
+
+         Condition   Value   
+         -----------------
+
+</BoundaryConditions>
+
+<SolverSettings>
+Solver Settings
+---------------
+
+   Equations
+
+      Equation          Solved   
+      ------------------------
+      Flow              yes      
+      Volume Fraction   yes      
+      Turbulence        yes      
+      Energy            yes      
+
+   Numerics
+
+      Numeric                         Enabled   
+      ---------------------------------------
+      Absolute Velocity Formulation   yes       
+
+   Unsteady Calculation Parameters
+
+                                      
+      -----------------------------
+      Number of Time Steps       0    
+      Time Step Size [s]         1    
+      Max Iterations/Time Step   20   
+
+   Under-Relaxation Factors
+
+      Variable                     Relaxation Factor   
+      ----------------------------------------------
+      Pressure                     0.3                 
+      Density                      1                   
+      Body Forces                  1                   
+      Momentum                     0.7                 
+      Turbulent Kinetic Energy     0.8                 
+      Turbulent Dissipation Rate   0.8                 
+      Turbulent Viscosity          1                   
+      Energy                       1                   
+
+   Linear Solver
+
+      Variable                     Solver Type   Termination Criterion   Residual Reduction Tolerance   
+      -----------------------------------------------------------------------------------------------
+      Pressure                     V-Cycle       0.1                                                    
+      X-Momentum                   Flexible      0.1                     0.7                            
+      Y-Momentum                   Flexible      0.1                     0.7                            
+      Z-Momentum                   Flexible      0.1                     0.7                            
+      Turbulent Kinetic Energy     Flexible      0.1                     0.7                            
+      Turbulent Dissipation Rate   Flexible      0.1                     0.7                            
+      Energy                       F-Cycle       0.1                                                    
+
+   Pressure-Velocity Coupling
+
+      Parameter             Value     
+      -----------------------------
+      Type                  SIMPLEC   
+      Skewness Correction   0         
+
+   Discretization Scheme
+
+      Variable                     Scheme                
+      ------------------------------------------------
+      Pressure                     PRESTO!               
+      Momentum                     Second Order Upwind   
+      Volume Fraction              Geo-Reconstruct       
+      Turbulent Kinetic Energy     Second Order Upwind   
+      Turbulent Dissipation Rate   Second Order Upwind   
+      Energy                       Second Order Upwind   
+
+   Solution Limits
+
+      Quantity                         Limit    
+      ---------------------------------------
+      Minimum Absolute Pressure        1        
+      Maximum Absolute Pressure        5e+10    
+      Minimum Temperature              1        
+      Maximum Temperature              5000     
+      Minimum Turb. Kinetic Energy     1e-14    
+      Minimum Turb. Dissipation Rate   1e-20    
+      Maximum Turb. Viscosity Ratio    100000   
+
+</SolverSettings>
+
+</FluentXMLReport>
